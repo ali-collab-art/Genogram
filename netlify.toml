@@ -1,0 +1,15 @@
+[build]
+  # Replace with the actual build command for your project
+  command = "npm run build"
+  # Replace with the actual publish directory (build / dist / public)
+  publish = "build"
+
+[context.production.environment]
+  # Example env var usage; set real values in Netlify UI instead of storing secrets here
+  NODE_ENV = "production"
+
+# SPA redirect (makes client-side routing work)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
